@@ -349,32 +349,6 @@ test: add unit tests for client manager
 
 </details>
 
-## 📊 Roadmap
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/74038190/212284119-fbfd994d-7c07-4b73-94dd-4b49de0b3c52.gif" width="500">
-</div>
-
-### 🎯 **Upcoming Features**
-
-- [ ] 🔐 **Enhanced Security**: OAuth2 and JWT authentication
-- [ ] 📱 **Mobile App**: React Native companion app
-- [ ] 🧠 **AI Assistants**: Custom agent personalities
-- [ ] 📈 **Advanced Analytics**: Performance dashboards
-- [ ] 🔌 **Plugin System**: Extensible architecture
-- [ ] 🌍 **Internationalization**: Multi-language support
-- [ ] ☁️ **Cloud Deployment**: One-click cloud hosting
-- [ ] 🤖 **Auto-Discovery**: Automatic MCP server detection
-
-### 📅 **Release Timeline**
-
-| Version | Features | Release Date | Status |
-|---------|----------|--------------|--------|
-| v1.0.0 | Basic MCP client, Simple UI | ✅ Released | Complete |
-| v1.1.0 | Advanced client, Analytics | 🚧 In Progress | 80% |
-| v1.2.0 | Plugin system, Mobile support | 📅 Q3 2025 | Planned |
-| v2.0.0 | Cloud platform, Enterprise features | 📅 Q4 2025 | Planned |
-
 ## 📈 Stats & Analytics
 
 <div align="center">
@@ -450,7 +424,7 @@ tail -f logs/mcp_client.log
 ## 📄 License
 
 <div align="center">
-<div align="center">
+  
 ```
 MIT License
 
@@ -470,7 +444,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ```
-</div>
 <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT License">
 
 </div>
