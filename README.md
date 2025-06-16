@@ -1,3 +1,4 @@
+```markdown
 <div align="center">
 
 # 🌐 MCP Client Distributor Chat
@@ -115,33 +116,54 @@ The **Model Context Protocol (MCP)** is an open standard that enables AI applica
 git clone https://github.com/AdilzhanB/MCP-Client-distributor-chat.git
 cd MCP-Client-distributor-chat
 ```
-### 2️⃣ Install Dependencies
-bash
+
+### 2️⃣ **Install Dependencies**
+
+```bash
 pip install -r requirements.txt
-### 3️⃣ Set Environment Variables
-bash
+```
+
+### 3️⃣ **Set Environment Variables**
+
+```bash
 export HF_TOKEN="your_huggingface_token_here"
-### 4️⃣ Run Application
-bash
+```
+
+### 4️⃣ **Run Application**
+
+```bash
 # Simple version (recommended for beginners)
 python mcp_client_simple.py
 
 # Advanced version (full features)
 python mcp_client_advanced.py
-<div align="center"> <img src="https://img.shields.io/badge/🎉_Ready_to_Go!-Success-brightgreen?style=for-the-badge" alt="Success"> </div>
-📦 Installation
-🐍 Python Requirements
-<img src="https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python" alt="Python 3.8+"> <img src="https://img.shields.io/badge/OS-Windows%20|%20macOS%20|%20Linux-lightgrey?style=flat-square" alt="Cross Platform">
-📋 Dependencies
-txt
+```
+
+<div align="center">
+<img src="https://img.shields.io/badge/🎉_Ready_to_Go!-Success-brightgreen?style=for-the-badge" alt="Success">
+</div>
+
+## 📦 Installation
+
+### 🐍 **Python Requirements**
+
+<img src="https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python" alt="Python 3.8+">
+<img src="https://img.shields.io/badge/OS-Windows%20|%20macOS%20|%20Linux-lightgrey?style=flat-square" alt="Cross Platform">
+
+### 📋 **Dependencies**
+
+```txt
 gradio[mcp]>=4.44.0
 smolagents[mcp]>=0.3.0
 mcp>=1.0.0
 fastmcp>=0.1.0
 huggingface-hub>=0.19.0
 textblob>=0.17.1
-🔧 Development Setup
-bash
+```
+
+### 🔧 **Development Setup**
+
+```bash
 # Create virtual environment
 python -m venv mcp_env
 source mcp_env/bin/activate  # On Windows: mcp_env\Scripts\activate
@@ -151,8 +173,11 @@ pip install -e .
 
 # Install development dependencies
 pip install -r requirements-dev.txt
-🐳 Docker Support
-Dockerfile
+```
+
+### 🐳 **Docker Support**
+
+```dockerfile
 FROM python:3.10-slim
 
 WORKDIR /app
@@ -163,9 +188,15 @@ COPY . .
 EXPOSE 7860
 
 CMD ["python", "mcp_client_simple.py"]
-🏗️ Architecture
-<div align="center"> <img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d42b-4505-b9d4-f12c4e0270cc.gif" width="500"> </div>
-Mermaid
+```
+
+## 🏗️ Architecture
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d42b-4505-b9d4-f12c4e0270cc.gif" width="500">
+</div>
+
+```mermaid
 graph TB
     A[🌐 Gradio UI] --> B[🔌 MCP Client Manager]
     B --> C[📡 Server Connection Pool]
@@ -185,28 +216,48 @@ graph TB
     style B fill:#764ba2
     style G fill:#f093fb
     style J fill:#f5576c
-📚 Documentation
-🔧 API Reference
-<details> <summary>📖 MCP Client API</summary>
-MCPClient Class
-Python
+```
+
+## 📚 Documentation
+
+### 🔧 **API Reference**
+
+<details>
+<summary>📖 MCP Client API</summary>
+
+#### `MCPClient` Class
+
+```python
 class AdvancedMCPClient:
     async def connect_to_server(self, server_name: str) -> tuple[bool, str]
     async def chat_with_agent(self, message: str, server_name: str) -> str
     def add_custom_server(self, name: str, url: str, description: str) -> tuple[bool, str]
     def get_server_status(self) -> str
     def get_conversation_history(self, limit: int = 10) -> str
-</details> <details> <summary>🛠️ Configuration Options</summary>
-Environment Variables
-Variable	Description	Required	Default
-HF_TOKEN	Hugging Face API Token	✅ Yes	-
-MCP_SERVER_URL	Default MCP Server URL	❌ No	Built-in servers
-GRADIO_SERVER_NAME	Gradio server host	❌ No	127.0.0.1
-GRADIO_SERVER_PORT	Gradio server port	❌ No	7860
+```
+
 </details>
-🎯 Usage Examples
-<details> <summary>💡 Basic Usage</summary>
-Python
+
+<details>
+<summary>🛠️ Configuration Options</summary>
+
+#### Environment Variables
+
+| Variable | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `HF_TOKEN` | Hugging Face API Token | ✅ Yes | - |
+| `MCP_SERVER_URL` | Default MCP Server URL | ❌ No | Built-in servers |
+| `GRADIO_SERVER_NAME` | Gradio server host | ❌ No | `127.0.0.1` |
+| `GRADIO_SERVER_PORT` | Gradio server port | ❌ No | `7860` |
+
+</details>
+
+### 🎯 **Usage Examples**
+
+<details>
+<summary>💡 Basic Usage</summary>
+
+```python
 from mcp_client_simple import SimpleMCPClient
 
 # Initialize client
@@ -221,8 +272,14 @@ if success:
     # Chat with agent
     response = client.chat_with_agent("Hello! What tools do you have?")
     print(response)
-</details> <details> <summary>🔧 Advanced Usage</summary>
-Python
+```
+
+</details>
+
+<details>
+<summary>🔧 Advanced Usage</summary>
+
+```python
 from mcp_client_advanced import AdvancedMCPClient
 import asyncio
 
@@ -243,16 +300,25 @@ async def main():
     print(response)
 
 asyncio.run(main())
+```
+
 </details>
-🌟 Pre-configured Servers
+
+## 🌟 Pre-configured Servers
+
 <div align="center">
-Server Name	Description	Capabilities	Status
-🧮 MCP Tools Collection	General-purpose tools	Math, Text Processing, Utilities	🟢 Active
-🎭 Sentiment Analyzer	Text emotion analysis	Sentiment, Polarity, Comparison	🟢 Active
-🔧 Custom Server	User-defined endpoint	Configurable	⚙️ Manual
+
+| Server Name | Description | Capabilities | Status |
+|-------------|-------------|--------------|--------|
+| 🧮 **MCP Tools Collection** | General-purpose tools | Math, Text Processing, Utilities | 🟢 Active |
+| 🎭 **Sentiment Analyzer** | Text emotion analysis | Sentiment, Polarity, Comparison | 🟢 Active |
+| 🔧 **Custom Server** | User-defined endpoint | Configurable | ⚙️ Manual |
+
 </div>
-🧮 MCP Tools Collection
-Code
+
+### 🧮 **MCP Tools Collection**
+
+```
 URL: https://abidlabs-mcp-tool-http.hf.space/gradio_api/mcp/sse
 Features:
   • Prime factorization
@@ -260,8 +326,11 @@ Features:
   • Base64 encoding/decoding
   • String manipulation
   • Data format conversion
-🎭 Sentiment Analyzer
-Code
+```
+
+### 🎭 **Sentiment Analyzer**
+
+```
 URL: https://huggingface.co/spaces/Adilbai/MCP-sentiment-analyzer/gradio_api/mcp/sse
 Features:
   • Text sentiment analysis
@@ -269,101 +338,154 @@ Features:
   • Subjectivity detection
   • Batch processing
   • Sentiment comparison
-🤝 Contributing
-<div align="center"> <img src="https://user-images.githubusercontent.com/74038190/212284145-bf2c01a8-c448-4f1a-b911-996024c84606.gif" width="400"> </div>
+```
+
+## 🤝 Contributing
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284145-bf2c01a8-c448-4f1a-b911-996024c84606.gif" width="400">
+</div>
+
 We welcome contributions! Here's how you can help:
 
-🎯 Ways to Contribute
-🐛 Bug Reports: Found an issue? Open an issue
-✨ Feature Requests: Have an idea? Start a discussion
-🔧 Code Contributions: Submit a Pull Request
-📚 Documentation: Improve our docs and examples
-📋 Contribution Guidelines
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
-<details> <summary>🎨 Development Guidelines</summary>
-Code Style
-Follow PEP 8 for Python code
-Use type hints where possible
-Add docstrings for all functions
-Maintain test coverage above 80%
-Commit Messages
-Code
+### 🎯 **Ways to Contribute**
+
+- 🐛 **Bug Reports**: Found an issue? [Open an issue](https://github.com/AdilzhanB/MCP-Client-distributor-chat/issues)
+- ✨ **Feature Requests**: Have an idea? [Start a discussion](https://github.com/AdilzhanB/MCP-Client-distributor-chat/discussions)
+- 🔧 **Code Contributions**: Submit a [Pull Request](https://github.com/AdilzhanB/MCP-Client-distributor-chat/pulls)
+- 📚 **Documentation**: Improve our docs and examples
+
+### 📋 **Contribution Guidelines**
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+<details>
+<summary>🎨 Development Guidelines</summary>
+
+#### Code Style
+- Follow PEP 8 for Python code
+- Use type hints where possible
+- Add docstrings for all functions
+- Maintain test coverage above 80%
+
+#### Commit Messages
+```
 feat: add new MCP server integration
 fix: resolve connection timeout issues
 docs: update API documentation
 style: format code with black
 test: add unit tests for client manager
-</details>
-📊 Roadmap
-<div align="center"> <img src="https://user-images.githubusercontent.com/74038190/212284119-fbfd994d-7c07-4b73-94dd-4b49de0b3c52.gif" width="500"> </div>
-🎯 Upcoming Features
- 🔐 Enhanced Security: OAuth2 and JWT authentication
- 📱 Mobile App: React Native companion app
- 🧠 AI Assistants: Custom agent personalities
- 📈 Advanced Analytics: Performance dashboards
- 🔌 Plugin System: Extensible architecture
- 🌍 Internationalization: Multi-language support
- ☁️ Cloud Deployment: One-click cloud hosting
- 🤖 Auto-Discovery: Automatic MCP server detection
-📅 Release Timeline
-Version	Features	Release Date	Status
-v1.0.0	Basic MCP client, Simple UI	✅ Released	Complete
-v1.1.0	Advanced client, Analytics	🚧 In Progress	80%
-v1.2.0	Plugin system, Mobile support	📅 Q3 2025	Planned
-v2.0.0	Cloud platform, Enterprise features	📅 Q4 2025	Planned
-📈 Stats & Analytics
-<div align="center">
-GitHub stars GitHub forks GitHub watchers
+```
 
-GitHub issues GitHub pull requests GitHub license
+</details>
+
+## 📊 Roadmap
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284119-fbfd994d-7c07-4b73-94dd-4b49de0b3c52.gif" width="500">
+</div>
+
+### 🎯 **Upcoming Features**
+
+- [ ] 🔐 **Enhanced Security**: OAuth2 and JWT authentication
+- [ ] 📱 **Mobile App**: React Native companion app
+- [ ] 🧠 **AI Assistants**: Custom agent personalities
+- [ ] 📈 **Advanced Analytics**: Performance dashboards
+- [ ] 🔌 **Plugin System**: Extensible architecture
+- [ ] 🌍 **Internationalization**: Multi-language support
+- [ ] ☁️ **Cloud Deployment**: One-click cloud hosting
+- [ ] 🤖 **Auto-Discovery**: Automatic MCP server detection
+
+### 📅 **Release Timeline**
+
+| Version | Features | Release Date | Status |
+|---------|----------|--------------|--------|
+| v1.0.0 | Basic MCP client, Simple UI | ✅ Released | Complete |
+| v1.1.0 | Advanced client, Analytics | 🚧 In Progress | 80% |
+| v1.2.0 | Plugin system, Mobile support | 📅 Q3 2025 | Planned |
+| v2.0.0 | Cloud platform, Enterprise features | 📅 Q4 2025 | Planned |
+
+## 📈 Stats & Analytics
+
+<div align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/AdilzhanB/MCP-Client-distributor-chat?style=social)
+![GitHub forks](https://img.shields.io/github/forks/AdilzhanB/MCP-Client-distributor-chat?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/AdilzhanB/MCP-Client-distributor-chat?style=social)
+
+![GitHub issues](https://img.shields.io/github/issues/AdilzhanB/MCP-Client-distributor-chat?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AdilzhanB/MCP-Client-distributor-chat?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/AdilzhanB/MCP-Client-distributor-chat?style=flat-square)
 
 </div>
-📊 Project Statistics
-Code
+
+### 📊 **Project Statistics**
+
+```
 📦 Total Files: 15+
 🐍 Python Code: 2,500+ lines
 📚 Documentation: 1,000+ lines
 🧪 Test Coverage: 85%
 🌟 GitHub Stars: Growing
 👥 Contributors: Open for all
-🆘 Support & Help
-<div align="center"> <img src="https://user-images.githubusercontent.com/74038190/212284126-7ba11ba6-5dbc-4c55-854d-1b8fb48ce05d.gif" width="400"> </div>
-💬 Get Help
-📖 Documentation: Read our comprehensive docs
-💬 Discussions: Join community discussions
-🐛 Issues: Report bugs or request features
-📧 Email: Contact maintainers
-🔧 Troubleshooting
-<details> <summary>❌ Common Issues & Solutions</summary>
-Connection Failed
-bash
+```
+
+## 🆘 Support & Help
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284126-7ba11ba6-5dbc-4c55-854d-1b8fb48ce05d.gif" width="400">
+</div>
+
+### 💬 **Get Help**
+
+- 📖 **Documentation**: [Read our comprehensive docs](https://github.com/AdilzhanB/MCP-Client-distributor-chat/wiki)
+- 💬 **Discussions**: [Join community discussions](https://github.com/AdilzhanB/MCP-Client-distributor-chat/discussions)
+- 🐛 **Issues**: [Report bugs or request features](https://github.com/AdilzhanB/MCP-Client-distributor-chat/issues)
+- 📧 **Email**: [Contact maintainers](mailto:AdilzhanB@users.noreply.github.com)
+
+### 🔧 **Troubleshooting**
+
+<details>
+<summary>❌ Common Issues & Solutions</summary>
+
+#### Connection Failed
+```bash
 # Check your HF_TOKEN
 echo $HF_TOKEN
 
 # Verify server URL
 curl -I https://server-url/gradio_api/mcp/sse
-Import Errors
-bash
+```
+
+#### Import Errors
+```bash
 # Reinstall dependencies
 pip install --upgrade -r requirements.txt
 
 # Check Python version
 python --version  # Should be 3.8+
-Performance Issues
-bash
+```
+
+#### Performance Issues
+```bash
 # Monitor resource usage
 htop
 
 # Check logs
 tail -f logs/mcp_client.log
+```
+
 </details>
-📄 License
+
+## 📄 License
+
 <div align="center">
-Code
+
+```
 MIT License
 
 Copyright (c) 2025 AdilzhanB
@@ -381,23 +503,54 @@ copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT License"> </div>
-🙏 Acknowledgments
-<div align="center"> <img src="https://user-images.githubusercontent.com/74038190/212284175-acc7d51c-6eba-4f9e-b132-8adeaa8f8a03.gif" width="400"> </div>
-🌟 Special Thanks
-🤗 Hugging Face: For providing amazing infrastructure and MCP support
-🎨 Gradio Team: For the incredible UI framework
-🤖 smolagents: For MCP client implementation
-🌐 MCP Community: For protocol development and standards
-👥 Contributors: Everyone who makes this project better
-🔗 Powered By
-<p align="center"> <img src="https://img.shields.io/badge/Powered_by-Hugging_Face-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="HF"> <img src="https://img.shields.io/badge/Built_with-Gradio-orange?style=for-the-badge&logo=gradio&logoColor=white" alt="Gradio"> <img src="https://img.shields.io/badge/Uses-smolagents-blue?style=for-the-badge&logo=ai&logoColor=white" alt="smolagents"> <img src="https://img.shields.io/badge/Protocol-MCP-purple?style=for-the-badge&logo=protocol&logoColor=white" alt="MCP"> </p>
+```
+
+<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT License">
+
+</div>
+
+## 🙏 Acknowledgments
+
 <div align="center">
-🚀 Ready to Start Your MCP Journey?
-<a href="https://huggingface.co/spaces/Adilbai/MCP_client_distributor"> <img src="https://img.shields.io/badge/🌟_Try_Now-Live_Demo-success?style=for-the-badge&logo=rocket&logoColor=white" alt="Try Now"> </a> <a href="https://github.com/AdilzhanB/MCP-Client-distributor-chat"> <img src="https://img.shields.io/badge/⭐_Star_on_GitHub-Support_Project-blue?style=for-the-badge&logo=github&logoColor=white" alt="Star on GitHub"> </a>
+<img src="https://user-images.githubusercontent.com/74038190/212284175-acc7d51c-6eba-4f9e-b132-8adeaa8f8a03.gif" width="400">
+</div>
+
+### 🌟 **Special Thanks**
+
+- 🤗 **Hugging Face**: For providing amazing infrastructure and MCP support
+- 🎨 **Gradio Team**: For the incredible UI framework
+- 🤖 **smolagents**: For MCP client implementation
+- 🌐 **MCP Community**: For protocol development and standards
+- 👥 **Contributors**: Everyone who makes this project better
+
+### 🔗 **Powered By**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Powered_by-Hugging_Face-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="HF">
+  <img src="https://img.shields.io/badge/Built_with-Gradio-orange?style=for-the-badge&logo=gradio&logoColor=white" alt="Gradio">
+  <img src="https://img.shields.io/badge/Uses-smolagents-blue?style=for-the-badge&logo=ai&logoColor=white" alt="smolagents">
+  <img src="https://img.shields.io/badge/Protocol-MCP-purple?style=for-the-badge&logo=protocol&logoColor=white" alt="MCP">
+</p>
+
+---
+
+<div align="center">
+
+### 🚀 **Ready to Start Your MCP Journey?**
+
+<a href="https://huggingface.co/spaces/Adilbai/MCP_client_distributor">
+  <img src="https://img.shields.io/badge/🌟_Try_Now-Live_Demo-success?style=for-the-badge&logo=rocket&logoColor=white" alt="Try Now">
+</a>
+
+<a href="https://github.com/AdilzhanB/MCP-Client-distributor-chat">
+  <img src="https://img.shields.io/badge/⭐_Star_on_GitHub-Support_Project-blue?style=for-the-badge&logo=github&logoColor=white" alt="Star on GitHub">
+</a>
+
 <br><br>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
-Made with ❤️ by AdilzhanB • 2025-06-16
 
-</div> ```
+**Made with ❤️ by [AdilzhanB](https://github.com/AdilzhanB) • 2025-06-16**
+
+</div>
+```
