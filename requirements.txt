@@ -1,0 +1,4 @@
+gradio>=4.44.0
+smolagents>=0.3.0
+smolagents[mcp]>=0.3.0
+mcp>=0.3.0
