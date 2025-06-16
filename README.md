@@ -39,7 +39,7 @@ The **Model Context Protocol (MCP)** is an open standard that enables AI applica
 </details>
 
 ## ✨ Features
-<div align="center">
+
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -74,19 +74,34 @@ The **Model Context Protocol (MCP)** is an open standard that enables AI applica
 </td>
 </tr>
 </table>
-</div>
+
 ## 🎮 Demo
 
 <div align="center">
 
 ### 🌟 **Live Demo Available**
-<div align="center">
-  <a href="https://huggingface.co/spaces/Adilbai/MCP_client_distributor">
-    <img src="https://img.shields.io/badge/🚀_Try_Live_Demo-Hugging_Face_Spaces-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Live Demo">
-  </a>
-  
-  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="500">
+
+<a href="https://huggingface.co/spaces/Adilbai/MCP_client_distributor">
+  <img src="https://img.shields.io/badge/🚀_Try_Live_Demo-Hugging_Face_Spaces-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Live Demo">
+</a>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="500">
+
 </div>
+
+### 📸 Screenshots
+
+<details>
+<summary>🖼️ View Interface Screenshots</summary>
+
+| Feature | Screenshot |
+|---------|------------|
+| 🔌 Server Management | *Coming Soon* |
+| 💬 Agent Chat | *Coming Soon* |
+| 📊 Analytics Dashboard | *Coming Soon* |
+| ⚙️ Settings Panel | *Coming Soon* |
+
+</details>
 
 ## 🚀 Quick Start
 
@@ -230,6 +245,9 @@ class AdvancedMCPClient:
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `HF_TOKEN` | Hugging Face API Token | ✅ Yes | - |
+| `MCP_SERVER_URL` | Default MCP Server URL | ❌ No | Built-in servers |
+| `GRADIO_SERVER_NAME` | Gradio server host | ❌ No | `127.0.0.1` |
+| `GRADIO_SERVER_PORT` | Gradio server port | ❌ No | `7860` |
 
 </details>
 
@@ -363,6 +381,32 @@ test: add unit tests for client manager
 ```
 
 </details>
+
+## 📊 Roadmap
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284119-fbfd994d-7c07-4b73-94dd-4b49de0b3c52.gif" width="500">
+</div>
+
+### 🎯 **Upcoming Features**
+
+- [ ] 🔐 **Enhanced Security**: OAuth2 and JWT authentication
+- [ ] 📱 **Mobile App**: React Native companion app
+- [ ] 🧠 **AI Assistants**: Custom agent personalities
+- [ ] 📈 **Advanced Analytics**: Performance dashboards
+- [ ] 🔌 **Plugin System**: Extensible architecture
+- [ ] 🌍 **Internationalization**: Multi-language support
+- [ ] ☁️ **Cloud Deployment**: One-click cloud hosting
+- [ ] 🤖 **Auto-Discovery**: Automatic MCP server detection
+
+### 📅 **Release Timeline**
+
+| Version | Features | Release Date | Status |
+|---------|----------|--------------|--------|
+| v1.0.0 | Basic MCP client, Simple UI | ✅ Released | Complete |
+| v1.1.0 | Advanced client, Analytics | 🚧 In Progress | 80% |
+| v1.2.0 | Plugin system, Mobile support | 📅 Q3 2025 | Planned |
+| v2.0.0 | Cloud platform, Enterprise features | 📅 Q4 2025 | Planned |
 
 ## 📈 Stats & Analytics
 
