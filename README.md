@@ -7,10 +7,6 @@
 <img src="https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge&logo=python&logoColor=white" alt="Python">
 <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge" alt="License">
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&width=600&lines=🚀+Advanced+MCP+Client+Suite;🔌+Connect+to+Multiple+Servers;🤖+Chat+with+AI+Agents;📊+Real-time+Monitoring" alt="Typing SVG">
-</p>
-
 ### *The Ultimate Model Context Protocol Client for Modern AI Workflows*
 
 <p align="center">
@@ -39,7 +35,7 @@ The **Model Context Protocol (MCP)** is an open standard that enables AI applica
 </details>
 
 ## ✨ Features
-
+<div align="center">
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -74,6 +70,7 @@ The **Model Context Protocol (MCP)** is an open standard that enables AI applica
 </td>
 </tr>
 </table>
+</div>
 
 ## 🎮 Demo
 
@@ -89,19 +86,6 @@ The **Model Context Protocol (MCP)** is an open standard that enables AI applica
 
 </div>
 
-### 📸 Screenshots
-
-<details>
-<summary>🖼️ View Interface Screenshots</summary>
-
-| Feature | Screenshot |
-|---------|------------|
-| 🔌 Server Management | *Coming Soon* |
-| 💬 Agent Chat | *Coming Soon* |
-| 📊 Analytics Dashboard | *Coming Soon* |
-| ⚙️ Settings Panel | *Coming Soon* |
-
-</details>
 
 ## 🚀 Quick Start
 
@@ -145,10 +129,10 @@ python mcp_client_advanced.py
 ## 📦 Installation
 
 ### 🐍 **Python Requirements**
-
+<div align="center">
 <img src="https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python" alt="Python 3.8+">
 <img src="https://img.shields.io/badge/OS-Windows%20|%20macOS%20|%20Linux-lightgrey?style=flat-square" alt="Cross Platform">
-
+</div>
 ### 📋 **Dependencies**
 
 ```txt
@@ -245,9 +229,6 @@ class AdvancedMCPClient:
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `HF_TOKEN` | Hugging Face API Token | ✅ Yes | - |
-| `MCP_SERVER_URL` | Default MCP Server URL | ❌ No | Built-in servers |
-| `GRADIO_SERVER_NAME` | Gradio server host | ❌ No | `127.0.0.1` |
-| `GRADIO_SERVER_PORT` | Gradio server port | ❌ No | `7860` |
 
 </details>
 
@@ -310,7 +291,6 @@ asyncio.run(main())
 | Server Name | Description | Capabilities | Status |
 |-------------|-------------|--------------|--------|
 | 🧮 **MCP Tools Collection** | General-purpose tools | Math, Text Processing, Utilities | 🟢 Active |
-| 🎭 **Sentiment Analyzer** | Text emotion analysis | Sentiment, Polarity, Comparison | 🟢 Active |
 | 🔧 **Custom Server** | User-defined endpoint | Configurable | ⚙️ Manual |
 
 </div>
@@ -326,19 +306,6 @@ Features:
   • String manipulation
   • Data format conversion
 ```
-
-### 🎭 **Sentiment Analyzer**
-
-```
-URL: https://huggingface.co/spaces/Adilbai/MCP-sentiment-analyzer/gradio_api/mcp/sse
-Features:
-  • Text sentiment analysis
-  • Polarity measurement
-  • Subjectivity detection
-  • Batch processing
-  • Sentiment comparison
-```
-
 ## 🤝 Contributing
 
 <div align="center">
@@ -425,9 +392,9 @@ test: add unit tests for client manager
 ### 📊 **Project Statistics**
 
 ```
-📦 Total Files: 15+
-🐍 Python Code: 2,500+ lines
-📚 Documentation: 1,000+ lines
+📦 Total Files: 1
+🐍 Python Code: 400+ lines
+📚 Documentation: 500+ lines
 🧪 Test Coverage: 85%
 🌟 GitHub Stars: Growing
 👥 Contributors: Open for all
@@ -483,7 +450,7 @@ tail -f logs/mcp_client.log
 ## 📄 License
 
 <div align="center">
-
+<div align="center">
 ```
 MIT License
 
@@ -503,7 +470,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ```
-
+</div>
 <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT License">
 
 </div>
